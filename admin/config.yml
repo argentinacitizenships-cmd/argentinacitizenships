@@ -28,7 +28,7 @@ collections:
           name: "summary",
           widget: "text",
           required: false,
-          hint: "Optional short teaser used on the blog list.",
+          hint: "Optional short teaser used on the blog list and SEO/social descriptions.",
         }
       - {
           label: "Thumbnail",
