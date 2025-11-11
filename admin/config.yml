@@ -13,12 +13,11 @@ collections:
     label: Posts
     folder: content/posts
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{slug}}"
     preview_path: blog/{{slug}}
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Summary", name: "summary", widget: "text", required: false, hint: "Optional short teaser used on the blog list." }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false, hint: "Shown on the homepage blog list." }
       - { label: "Body", name: "body", widget: "markdown" }
 

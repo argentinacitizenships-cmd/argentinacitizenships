@@ -1,4 +1,0 @@
-[build]
-  command = "node scripts/build_posts_index.mjs"
-  publish = "."
-
