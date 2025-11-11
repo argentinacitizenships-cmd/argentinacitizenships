@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-site_url: https://aesthetic-swan-50a8ec.netlify.app
-display_url: https://aesthetic-swan-50a8ec.netlify.app
+site_url: https://argentinacitizenships.netlify.app
+display_url: https://argentinacitizenships.netlify.app
 
 media_folder: images/uploads
 public_folder: /images/uploads
