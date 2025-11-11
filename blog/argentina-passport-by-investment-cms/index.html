@@ -319,6 +319,24 @@
               dateEl.textContent = formatted;
             }
           }
+
+          if (front.thumbnail) {
+            var thumb = front.thumbnail.startsWith("http")
+              ? front.thumbnail
+              : front.thumbnail.startsWith("/")
+              ? front.thumbnail
+              : "/" + front.thumbnail.replace(/^\//, "");
+            var heroImg = document.querySelector(".image-6");
+            if (heroImg) {
+              heroImg.src = thumb;
+            }
+            var ogImage = document.querySelector('meta[property="og:image"]');
+            if (ogImage) ogImage.setAttribute("content", thumb);
+            var twitterImage = document.querySelector(
+              'meta[name="twitter:image"], meta[property="twitter:image"]'
+            );
+            if (twitterImage) twitterImage.setAttribute("content", thumb);
+          }
         }
 
         function ensureTableStyles() {
