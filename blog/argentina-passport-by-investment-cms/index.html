@@ -170,7 +170,7 @@
         <div class="new-era">
           <div class="max-width-wrapper center">
             <div class="text-cont-wrapper _50 blog">
-              <div class="blog-post blogone w-richtext" data-cms="article"></div>
+              <div data-cms="article"></div>
             </div>
           </div>
         </div>
@@ -253,8 +253,8 @@
     <script>
       (function () {
         var slug = "argentina-passport-by-investment";
-        var article = document.querySelector('[data-cms="article"]');
-        if (!article) return;
+        var container = document.querySelector('[data-cms="article"]');
+        if (!container) return;
 
         function parseFrontMatter(raw) {
           if (!raw.startsWith("---")) {
@@ -321,6 +321,49 @@
           }
         }
 
+        function ensureTableStyles() {
+          if (document.getElementById("cms-table-styles")) return;
+          var style = document.createElement("style");
+          style.id = "cms-table-styles";
+          style.textContent =
+            ".cbi-wrap{width:100%;padding:8px;font-family:system-ui,-apple-system,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif;}" +
+            ".cbi-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.05);}" +
+            ".cbi-table caption{position:absolute;left:-9999px;}" +
+            ".cbi-table thead{background:linear-gradient(180deg,#f7f8fc,#eef2ff);}" +
+            ".cbi-table th,.cbi-table td{text-align:left;padding:14px 16px;border-bottom:1px solid #f1f5f9;font-size:15px;color:#111827;}" +
+            ".cbi-table th{font-weight:700;font-size:14px;color:#1e293b;letter-spacing:0.02em;}" +
+            ".cbi-table tbody tr:nth-child(even){background:#fafbff;}" +
+            ".cbi-table .muted{color:#6b7280;font-size:14px;}" +
+            "@media(max-width:768px){.cbi-table thead{display:none;}.cbi-table,.cbi-table tbody,.cbi-table tr,.cbi-table td{display:block;width:100%;}.cbi-table tr{background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:12px;box-shadow:0 4px 12px rgba(16,24,40,0.05);}.cbi-table td{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border:none;border-bottom:1px solid #f1f5f9;font-size:14px;}.cbi-table td:last-child{border-bottom:none;}.cbi-table td::before{content:attr(data-label);font-weight:600;color:#334155;flex-basis:50%;text-align:left;}}";
+          document.head.appendChild(style);
+        }
+
+        function enhanceTables(root) {
+          var tables = root.querySelectorAll("table");
+          if (!tables.length) return;
+          ensureTableStyles();
+          tables.forEach(function (table) {
+            if (!table.classList.contains("cbi-table")) {
+              table.classList.add("cbi-table");
+            }
+            if (!table.parentElement || !table.parentElement.classList.contains("cbi-wrap")) {
+              var wrap = document.createElement("div");
+              wrap.className = "cbi-wrap";
+              table.parentNode.insertBefore(wrap, table);
+              wrap.appendChild(table);
+            }
+          });
+        }
+
+        function renderMarkdown(body) {
+          container.innerHTML = "";
+          var block = document.createElement("div");
+          block.className = "blog-post blogone w-richtext";
+          block.innerHTML = marked.parse(body);
+          container.appendChild(block);
+          enhanceTables(block);
+        }
+
         function loadFallback() {
           return fetch("../argentina-passport-by-investment/index.html")
             .then(function (res) {
@@ -334,7 +377,7 @@
                 ".text-cont-wrapper._50.blog"
               );
               if (!legacy) throw new Error("Legacy content not found");
-              article.innerHTML = legacy.innerHTML;
+              container.innerHTML = legacy.innerHTML;
             });
         }
 
@@ -348,7 +391,7 @@
             var front = parsed.data || {};
             var body = parsed.body || "";
             applyFrontMatter(front);
-            article.innerHTML = marked.parse(body);
+            renderMarkdown(body);
           })
           .catch(function (err) {
             console.warn("Falling back to legacy content", err);
