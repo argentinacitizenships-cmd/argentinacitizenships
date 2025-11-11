@@ -13,7 +13,7 @@ collections:
     label: Posts
     folder: content/posts
     create: true
-    slug: "{{year}}-{{month}}-{{slug}}"
+    slug: "{{slug}}"
     preview_path: blog/{{slug}}
     fields:
       - { label: "Title", name: "title", widget: "string" }
