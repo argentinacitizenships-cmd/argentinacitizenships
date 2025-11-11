@@ -110,6 +110,92 @@
       rel="canonical"
       href="https://argentinacitizenships.com/blog/argentina-passport-by-investment/"
     />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      (function () {
+        var slug = "argentina-passport-by-investment";
+        var articleEl = document.querySelector('[data-cms="article"]');
+        if (!articleEl) return;
+
+        function parseFrontMatter(raw) {
+          var match = raw.match(/^---\s*[\r\n]+([\s\S]*?)\r?\n---\s*[\r\n]+([\s\S]*)$/);
+          if (!match) {
+            return { data: {}, body: raw };
+          }
+          var data = {};
+          match[1].split(/\r?\n/).forEach(function (line) {
+            if (!line.trim()) return;
+            var idx = line.indexOf(":");
+            if (idx === -1) return;
+            var key = line.slice(0, idx).trim();
+            if (!key) return;
+            var value = line.slice(idx + 1).trim();
+            if (
+              (value.startsWith('"') && value.endsWith('"')) ||
+              (value.startsWith("'") && value.endsWith("'"))
+            ) {
+              value = value.slice(1, -1);
+            }
+            data[key] = value;
+          });
+          return { data: data, body: match[2] };
+        }
+
+        fetch("/content/posts/" + slug + ".md")
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error("Post not found");
+            }
+            return response.text();
+          })
+          .then(function (raw) {
+            var parsed = parseFrontMatter(raw);
+            var frontMatter = parsed.data || {};
+            var body = parsed.body || "";
+
+            if (frontMatter.title) {
+              var titleEl = document.querySelector('[data-cms="title"]');
+              if (titleEl) {
+                titleEl.textContent = frontMatter.title;
+              }
+              document.title = frontMatter.title;
+              var ogTitle = document.querySelector('meta[property="og:title"]');
+              if (ogTitle) ogTitle.setAttribute("content", frontMatter.title);
+              var twitterTitle = document.querySelector('meta[property="twitter:title"]');
+              if (twitterTitle) twitterTitle.setAttribute("content", frontMatter.title);
+            }
+
+            if (frontMatter.summary) {
+              var metaDesc = document.querySelector('meta[name="description"]');
+              if (metaDesc) metaDesc.setAttribute("content", frontMatter.summary);
+              var ogDesc = document.querySelector('meta[property="og:description"]');
+              if (ogDesc) ogDesc.setAttribute("content", frontMatter.summary);
+              var twitterDesc = document.querySelector('meta[property="twitter:description"]');
+              if (twitterDesc) twitterDesc.setAttribute("content", frontMatter.summary);
+            }
+
+            if (frontMatter.date) {
+              var dateEl = document.querySelector('[data-cms="date"]');
+              if (dateEl) {
+                var date = new Date(frontMatter.date);
+                var formatted = isNaN(date.getTime())
+                  ? frontMatter.date
+                  : date.toLocaleDateString(undefined, {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    });
+                dateEl.textContent = formatted;
+              }
+            }
+
+            articleEl.innerHTML = marked.parse(body);
+          })
+          .catch(function (error) {
+            console.error("Failed to load CMS content", error);
+          });
+      })();
+    </script>
   </head>
   <body>
     <div class="div-block-24">
@@ -159,11 +245,11 @@
         <div id="benefits" class="new-era">
           <div class="max-width-wrapper vertical-center">
             <div class="text-cont-wrapper center blog">
-              <h1 class="body-titile big">
+              <h1 class="body-titile big" data-cms="title">
                 Argentina Passport by Investment: Global Mobility &amp;
                 Visa-Free Access (2026 Update)
               </h1>
-              <div class="blog-date">October 6, 2015</div>
+              <div class="blog-date" data-cms="date">October 6, 2015</div>
             </div>
           </div>
         </div>
@@ -377,343 +463,10 @@
                 <p><a href="../../index.html">Join the Waitlist</a></p>
                 <p>‍</p>
               </div>
-              <div class="blog-post blogone w-richtext">
-                <p>
-                  Argentina’s newly announced Citizenship by Investment Program
-                  is rapidly positioning the country as a serious player in
-                  global investment migration. Through the Argentina passport by
-                  investment, eligible investors can soon obtain one of the
-                  world’s most respected Latin American passports, offering
-                  broad visa-free access, a family-friendly pathway, and strong
-                  international recognition.
-                </p>
-                <p>
-                  While the program, enacted under Decree 524/2025, is still
-                  finalizing its technical regulations, its global appeal is
-                  already clear. Argentina combines mobility, and
-                  cost-effectiveness, factors that have made other programs
-                  worldwide thrive.
-                </p>
-                <h2>The Power of the Argentine Passport</h2>
-                <p>
-                  The Argentine passport consistently ranks among the world’s
-                  strongest. As of 2025, it grants visa-free or visa-on-arrival
-                  access to over 172 destinations, including:
-                </p>
-                <ul role="list">
-                  <li>All 27 countries of the Schengen Area</li>
-                  <li>The United Kingdom and Ireland</li>
-                  <li>Japan, Singapore, and most of East Asia</li>
-                  <li>Nearly all of Latin America</li>
-                </ul>
-                <p>
-                  Argentina’s government has also taken steps to rejoin the U.S.
-                  Visa Waiver Program, which would allow citizens to visit the
-                  United States for up to 90 days without a visa. Once
-                  reinstated, this would position Argentina’s passport among the
-                  top 15 globally for mobility.
-                </p>
-                <h2>From Residency to Direct Citizenship</h2>
-                <p>
-                  Traditionally, Argentina has been known for its relatively
-                  accessible naturalization process, allowing residents to apply
-                  for citizenship after roughly two years of living in the
-                  country. The new Citizenship by Investment framework, however,
-                  introduces a direct pathway to citizenship without requiring
-                  prior residence.
-                </p>
-                <p>
-                  Under Decree 524/2025, qualified foreign investors will be
-                  able to make an approved investment (expected to start at
-                  around USD 500,000) and apply directly for citizenship,
-                  bypassing the conventional multi-year residency stage.
-                </p>
-                <p>
-                  For a detailed breakdown of the legal foundations and
-                  requirements, see
-                  <a href="../../index.html"
-                    ><em
-                      >Argentina Citizenship by Investment - 2026 Official Guide
-                      &amp; Early Updates</em
-                    >.</a
-                  >
-                </p>
-                <h2>Visa‑Free Access Overview</h2>
-                <p>
-                  Argentina’s global mobility privileges extend across nearly
-                  every major world region. Here’s what new citizens can expect
-                  with an Argentina passport by investment:
-                </p>
-              </div>
-              <div class="code-embed-3 w-embed">
-                <style>
-                  /* ---- Clean Responsive Table (Webflow Embed) ---- */
-                  .cbi-wrap {
-                    width: 100%;
-                    padding: 8px;
-                    font-family: system-ui, -apple-system, "Segoe UI", Roboto,
-                      Helvetica, Arial, sans-serif;
-                  }
-
-                  .cbi-table {
-                    width: 100%;
-                    border-collapse: collapse;
-                    background: #fff;
-                    border-radius: 12px;
-                    overflow: hidden;
-                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-                  }
-
-                  .cbi-table caption {
-                    position: absolute;
-                    left: -9999px; /* accessible label */
-                  }
-
-                  .cbi-table thead {
-                    background: linear-gradient(180deg, #f7f8fc, #eef2ff);
-                  }
-
-                  .cbi-table th,
-                  .cbi-table td {
-                    text-align: left;
-                    padding: 14px 16px;
-                    border-bottom: 1px solid #f1f5f9;
-                    font-size: 15px;
-                    color: #111827;
-                  }
-
-                  .cbi-table th {
-                    font-weight: 700;
-                    font-size: 14px;
-                    color: #1e293b;
-                    letter-spacing: 0.02em;
-                  }
-
-                  .cbi-table tbody tr:nth-child(even) {
-                    background: #fafbff;
-                  }
-
-                  /* utility (not required here but left for parity) */
-                  .muted {
-                    color: #6b7280;
-                    font-size: 14px;
-                  }
-
-                  /* ---- Responsive stacking for phones ---- */
-                  @media (max-width: 768px) {
-                    .cbi-table thead {
-                      display: none;
-                    }
-
-                    .cbi-table,
-                    .cbi-table tbody,
-                    .cbi-table tr,
-                    .cbi-table td {
-                      display: block;
-                      width: 100%;
-                    }
-
-                    .cbi-table tr {
-                      background: #fff;
-                      border: 1px solid #e2e8f0;
-                      border-radius: 10px;
-                      margin-bottom: 12px;
-                      box-shadow: 0 4px 12px rgba(16, 24, 40, 0.05);
-                    }
-
-                    .cbi-table td {
-                      display: flex;
-                      justify-content: space-between;
-                      align-items: center;
-                      padding: 12px 16px;
-                      border: none;
-                      border-bottom: 1px solid #f1f5f9;
-                      font-size: 14px;
-                    }
-
-                    .cbi-table td:last-child {
-                      border-bottom: none;
-                    }
-
-                    .cbi-table td::before {
-                      content: attr(data-label);
-                      font-weight: 600;
-                      color: #334155;
-                      flex-basis: 50%;
-                      text-align: left;
-                    }
-                  }
-                </style>
-
-                <div class="cbi-wrap">
-                  <table class="cbi-table">
-                    <caption>
-                      Visa-Free Access Overview
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th>Region</th>
-                        <th>Visa-Free Access Highlights</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td data-label="Region"><strong>Europe</strong></td>
-                        <td data-label="Visa-Free Access Highlights">
-                          Schengen Zone (90 days), United Kingdom, Ireland,
-                          Balkans
-                        <body>
-                          <noscript>
-                            <iframe
-                              src="https://www.googletagmanager.com/ns.html?id=GTM-5Z755MHX"
-                              height="0"
-                              width="0"
-                              style="display: none; visibility: hidden"
-                            ></iframe>
-                          </noscript>
-                      </tr>
-                      <tr>
-                        <td data-label="Region"><strong>Americas</strong></td>
-                        <td data-label="Visa-Free Access Highlights">
-                          Canada (eTA pending), Brazil, Uruguay, Paraguay, Chile
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-label="Region">
-                          <strong>Middle East</strong>
-                        </td>
-                        <td data-label="Visa-Free Access Highlights">
-                          Israel, Turkey, UAE (90-day entry permitted)
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-label="Region"><strong>Africa</strong></td>
-                        <td data-label="Visa-Free Access Highlights">
-                          South Africa, Tunisia, Morocco
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="blog-post blogone w-richtext">
-                <p>
-                  Once the U.S. visa waiver reinstatement is complete,
-                  Argentina’s mobility network will rival that of EU member
-                  states such as Portugal or Greece.
-                </p>
-                <h2>Regional Advantage Through Mercosur</h2>
-                <p>
-                  Beyond global travel, one of Argentina’s most overlooked
-                  benefits is its regional integration through Mercosur, the
-                  South American trade bloc.
-                </p>
-                <p>
-                  Citizens of Argentina are automatically granted the right to
-                  live and work in Mercosur member countries like Brazil,
-                  Uruguay, and Paraguay without the need for a separate visa or
-                  permit.
-                </p>
-                <p>
-                  This makes the Argentina passport by investment particularly
-                  attractive to entrepreneurs and remote professionals seeking
-                  to expand their business or lifestyle options across Latin
-                  America.
-                </p>
-                <h2>Comparison with Caribbean CBI Passports</h2>
-                <p>
-                  Caribbean citizenship programs such as St. Kitts &amp; Nevis,
-                  Dominica, and Grenada have long been favored by investors
-                  seeking quick second passports.
-                </p>
-                <p>
-                  However, Argentina’s offering could surpass them in perceived
-                  legitimacy, visa‑free power, and regional advantages.
-                </p>
-                <p>
-                  While Caribbean passports provide access to 140-155
-                  destinations, Argentina exceeds 170+, including visa-free
-                  access to the Schengen Zone and advanced Asian markets.
-                </p>
-                <p>
-                  Additionally, Caribbean programs have faced increased scrutiny
-                  from the EU and UK, leading to tighter vetting and reduced
-                  credibility in certain financial and immigration circles.
-                  Argentina, as a G20 economy with established diplomatic
-                  relations, offers investors a more stable and globally
-                  respected alternative.
-                </p>
-                <p>
-                  For a detailed comparison, see
-                  <a
-                    href="../argentina-vs-caribbean-citizenship-by-investment/index.html"
-                    ><em
-                      >Argentina vs Caribbean Citizenship by Investment
-                      (Comparison Guide)</em
-                    ></a
-                  >.
-                </p>
-                <h2>Dual Citizenship and Tax Benefits</h2>
-                <p>
-                  Unlike many other nations, Argentina permits dual citizenship
-                  without restrictions. Investors do not need to renounce their
-                  existing nationality when obtaining Argentine citizenship.
-                </p>
-                <p>
-                  Furthermore, Argentina taxes are based on residency, not
-                  citizenship. This means that individuals who obtain
-                  citizenship but reside abroad are generally not subject to tax
-                  on foreign‑sourced income, which is a crucial factor for
-                  international investors.
-                </p>
-                <p>
-                  To understand the tax and legal implications in more depth,
-                  see
-                  <a
-                    href="../argentina-dual-citizenship-investors-tax-rules/index.html"
-                    ><em
-                      >Argentina Dual Citizenship: Rules, Taxes, and Legal
-                      Considerations for Investors</em
-                    >.</a
-                  >
-                </p>
-                <h2>Future Outlook</h2>
-                <p>
-                  As final regulations are published, Argentina’s new CBI
-                  program is expected to attract investors seeking both mobility
-                  and legitimacy.
-                </p>
-                <p>
-                  Its combination of fast‑track processing (30 business days),
-                  competitive investment levels, and strong diplomatic
-                  reputation make it a natural successor to programs that have
-                  recently closed or faced tightening restrictions.
-                </p>
-                <p>
-                  If the U.S. Visa Waiver reinstatement proceeds as planned,
-                  Argentina will likely emerge as one of the most valuable
-                  citizenships available by investment in 2025.
-                </p>
-                <h2>Join the Official Waitlist</h2>
-                <p>
-                  Applications for Argentina’s Citizenship by Investment Program
-                  are expected to open in late 2025 or early 2026. Join the
-                  waitlist below to receive early notifications once the
-                  official application window opens, along with expert insights
-                  and sector updates.
-                </p>
-                <p>
-                  <a
-                    href="../../index.html"
-                    data-tally-open="LZ17yv"
-                    data-tally-form-events-forwarding="1"
-                    data-tally-emoji-animation="none"
-                    data-tally-width="500"
-                    data-tally-layout="modal"
-                    >Join the Waitlist</a
-                  >
-                </p>
-              </div>
+              <div
+                class="blog-post blogone w-richtext"
+                data-cms="article"
+              ></div>
               <div class="blog-post blogtwo w-condition-invisible w-richtext">
                 <p>
                   For over a decade, the Caribbean nations dominated the global
