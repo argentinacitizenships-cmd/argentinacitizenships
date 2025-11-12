@@ -324,11 +324,12 @@
           }
 
           if (front.thumbnail) {
-            var thumb = front.thumbnail.startsWith("http")
-              ? front.thumbnail
-              : front.thumbnail.startsWith("/")
-              ? front.thumbnail
-              : "/" + front.thumbnail.replace(/^\//, "");
+            var thumb = front.thumbnail;
+            if (!/^https?:\/\//i.test(thumb)) {
+              thumb = thumb.startsWith("/")
+                ? basePath + thumb
+                : basePath + "/" + thumb.replace(/^\//, "");
+            }
             var heroImg = document.querySelector(".image-6");
             if (heroImg) {
               heroImg.src = thumb;
@@ -339,6 +340,14 @@
               'meta[name="twitter:image"], meta[property="twitter:image"]'
             );
             if (twitterImage) twitterImage.setAttribute("content", thumb);
+          } else {
+            var fallback =
+              basePath +
+              "/images/68ff883d169de8e53917460e_Argentina-Passport-by-Investment-p-500.jpg";
+            var heroImgDefault = document.querySelector(".image-6");
+            if (heroImgDefault) {
+              heroImgDefault.src = fallback;
+            }
           }
         }
 
