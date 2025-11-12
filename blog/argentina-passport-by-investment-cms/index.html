@@ -387,6 +387,44 @@
           });
         }
 
+        function splitRichTextBlocks(container, block) {
+          if (!container || !block) return;
+          var embeds = block.querySelectorAll(".code-embed-3.w-embed");
+          if (!embeds.length) return;
+
+          var className = block.className;
+          var current = document.createElement("div");
+          current.className = className;
+          container.insertBefore(current, block);
+
+          var node = block.firstChild;
+          while (node) {
+            var next = node.nextSibling;
+            if (
+              node.nodeType === 1 &&
+              node.classList.contains("code-embed-3") &&
+              node.classList.contains("w-embed")
+            ) {
+              if (!current.hasChildNodes()) {
+                container.removeChild(current);
+              }
+              container.insertBefore(node, block);
+              current = document.createElement("div");
+              current.className = className;
+              container.insertBefore(current, block);
+            } else {
+              current.appendChild(node);
+            }
+            node = next;
+          }
+
+          if (!current.hasChildNodes()) {
+            container.removeChild(current);
+          }
+
+          container.removeChild(block);
+        }
+
         function renderMarkdown(body) {
           container.innerHTML = "";
           var block = document.createElement("div");
@@ -394,6 +432,7 @@
           block.innerHTML = marked.parse(body);
           container.appendChild(block);
           enhanceTables(block);
+          splitRichTextBlocks(container, block);
         }
 
         function loadFallback() {
