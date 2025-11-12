@@ -17,12 +17,32 @@ For a detailed breakdown of the legal foundations and requirements, see _Argenti
 
 Argentina’s global mobility privileges extend across nearly every major world region. Here’s what new citizens can expect with an Argentina passport by investment:
 
-| Region | Visa-Free Access Highlights |
-| --- | --- |
-| **Europe** | Schengen Zone (90 days), United Kingdom, Ireland, Balkans |
-| **Americas** | Canada (eTA pending), Brazil, Uruguay, Paraguay, Chile |
-| **Middle East** | Israel, Turkey, UAE (90-day entry permitted) |
-| **Africa** | South Africa, Tunisia, Morocco |
+<table class="cbi-table">
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Visa-Free Access Highlights</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Europe</strong></td>
+      <td>Schengen Zone (90 days), United Kingdom, Ireland, Balkans</td>
+    </tr>
+    <tr>
+      <td><strong>Americas</strong></td>
+      <td>Canada (eTA pending), Brazil, Uruguay, Paraguay, Chile</td>
+    </tr>
+    <tr>
+      <td><strong>Middle East</strong></td>
+      <td>Israel, Turkey, UAE (90-day entry permitted)</td>
+    </tr>
+    <tr>
+      <td><strong>Africa</strong></td>
+      <td>South Africa, Tunisia, Morocco</td>
+    </tr>
+  </tbody>
+</table>
 
 Once the U.S. visa waiver reinstatement is complete, Argentina’s mobility network will rival that of EU member states such as Portugal or Greece.
 
