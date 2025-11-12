@@ -1,100 +1,11 @@
 ---
 title: "Argentina Passport by Investment: Global Mobility & Visa-Free Access (2026 Update)"
 date: 2025-08-01
-summary: "Discover the benefits of the Argentina Passport by Investment – visa-free access to 172+ countries plus Mercosur privileges and U.S. E-2 visa eligibility."
-thumbnail: "/images/68ff883d169de8e53917460e_Argentina-Passport-by-Investment-p-500.jpg"
----
-
-## From Residency to Direct Citizenship
-
-Traditionally, Argentina has been known for its relatively accessible naturalization process, allowing residents to apply for citizenship after roughly two years of living in the country. The new Citizenship by Investment framework, however, introduces a direct pathway to citizenship without requiring prior residence.
-
-Under Decree 524/2025, qualified foreign investors will be able to make an approved investment (expected to start at around USD 500,000) and apply directly for citizenship, bypassing the conventional multi-year residency stage.
-
-For a detailed breakdown of the legal foundations and requirements, see _Argentina Citizenship by Investment - 2026 Official Guide & Early Updates_.
-
-## Visa-Free Access Overview
-
-Argentina’s global mobility privileges extend across nearly every major world region. Here’s what new citizens can expect with an Argentina passport by investment:
-
-<table class="cbi-table">
-  <thead>
-    <tr>
-      <th>Region</th>
-      <th>Visa-Free Access Highlights</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Europe</strong></td>
-      <td>Schengen Zone (90 days), United Kingdom, Ireland, Balkans</td>
-    </tr>
-    <tr>
-      <td><strong>Americas</strong></td>
-      <td>Canada (eTA pending), Brazil, Uruguay, Paraguay, Chile</td>
-    </tr>
-    <tr>
-      <td><strong>Middle East</strong></td>
-      <td>Israel, Turkey, UAE (90-day entry permitted)</td>
-    </tr>
-    <tr>
-      <td><strong>Africa</strong></td>
-      <td>South Africa, Tunisia, Morocco</td>
-    </tr>
-  </tbody>
-</table>
-
-Once the U.S. visa waiver reinstatement is complete, Argentina’s mobility network will rival that of EU member states such as Portugal or Greece.
-
-## Regional Advantage Through Mercosur
-
-Beyond global travel, one of Argentina’s most overlooked benefits is its regional integration through Mercosur, the South American trade bloc.
-
-Citizens of Argentina are automatically granted the right to live and work in Mercosur member countries like Brazil, Uruguay, and Paraguay without the need for a separate visa or permit.
-
-This makes the Argentina passport by investment particularly attractive to entrepreneurs and remote professionals seeking to expand their business or lifestyle options across Latin America.
-
-## Comparison with Caribbean CBI Passports
-
-Caribbean citizenship programs such as St. Kitts & Nevis, Dominica, and Grenada have long been favored by investors seeking quick second passports.
-
-However, Argentina’s offering could surpass them in perceived legitimacy, visa-free power, and regional advantages.
-
-While Caribbean passports provide access to 140-155 destinations, Argentina exceeds 170+, including visa-free access to the Schengen Zone and advanced Asian markets.
-
-Additionally, Caribbean programs have faced increased scrutiny from the EU and UK, leading to tighter vetting and reduced credibility in certain financial and immigration circles. Argentina, as a G20 economy with established diplomatic relations, offers investors a more stable and globally respected alternative.
-
-For a detailed comparison, see _Argentina vs Caribbean Citizenship by Investment (Comparison Guide)_.
-
-## Dual Citizenship and Tax Benefits
-
-Unlike many other nations, Argentina permits dual citizenship without restrictions. Investors do not need to renounce their existing nationality when obtaining Argentine citizenship.
-
-Furthermore, Argentina taxes are based on residency, not citizenship. This means that individuals who obtain citizenship but reside abroad are generally not subject to tax on foreign-sourced income, which is a crucial factor for international investors.
-
-To understand the tax and legal implications in more depth, see _Argentina Dual Citizenship: Rules, Taxes, and Legal Considerations for Investors_.
-
-## Future Outlook
-
-As final regulations are published, Argentina’s new CBI program is expected to attract investors seeking both mobility and legitimacy.
-
-Its combination of fast-track processing (30 business days), competitive investment levels, and strong diplomatic reputation make it a natural successor to programs that have recently closed or faced tightening restrictions.
-
-If the U.S. Visa Waiver reinstatement proceeds as planned, Argentina will likely emerge as one of the most valuable citizenships available by investment in 2025.
-
-## Join the Official Waitlist
-
-Applications for Argentina’s Citizenship by Investment Program are expected to open in late 2025 or early 2026. Join the waitlist below to receive early notifications once the official application window opens, along with expert insights and sector updates.
-
-[Join the Waitlist](https://www.argentinacitizenships.com/)
----
-title: "Argentina Passport by Investment: Global Mobility & Visa-Free Access (2026 Update)"
-date: 2025-08-01
 summary: "Discover how Argentina’s new Citizenship by Investment pathway delivers a top-tier passport, Mercosur mobility, and family-friendly benefits for investors."
 thumbnail: "/images/68ff883d169de8e53917460e_Argentina-Passport-by-Investment-p-500.jpg"
 ---
 
-Argentina’s newly announced Citizenship by Investment (CBI) program is rapidly positioning the country as a serious player in global investment migration. Through the Argentina passport by investment, qualified investors can soon obtain one of the most respected Latin American passports, pairing broad visa-free access with a family-friendly pathway and strong international recognition.
+Argentina’s newly announced Citizenship by Investment (CBI) program is rapidly positioning the country as a serious player in global investment migration. Through the Argentina passport by investment, qualified investors can obtain one of the most respected Latin American passports, pairing broad visa-free access with a family-friendly pathway and strong international recognition.
 
 While the program—enacted under Presidential Decree 524/2025—is still finalizing its technical regulations, its global appeal is already clear. Argentina combines world-class mobility with competitive costs, the same ingredients that helped other citizenship programs thrive.
 
@@ -119,12 +30,132 @@ Under Decree 524/2025, eligible foreign investors will make an approved investme
 
 Argentina’s global mobility privileges extend across nearly every major world region. Here’s what new citizens can expect with an Argentina passport by investment:
 
-| Region      | Visa-Free Access Highlights                                        |
-| ----------- | ------------------------------------------------------------------ |
-| Europe      | Schengen Zone (90 days), United Kingdom, Ireland, Balkans          |
-| Americas    | Canada (eTA pending), Brazil, Uruguay, Paraguay, Chile             |
-| Middle East | Israel, Turkey, UAE (90-day entry permitted)                       |
-| Africa      | South Africa, Tunisia, Morocco                                     |
+<div class="code-embed-3 w-embed">
+  <style>
+    .cbi-wrap {
+      width: 100%;
+      padding: 8px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .cbi-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .cbi-table caption {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .cbi-table thead {
+      background: linear-gradient(180deg, #f7f8fc, #eef2ff);
+    }
+
+    .cbi-table th,
+    .cbi-table td {
+      text-align: left;
+      padding: 14px 16px;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 15px;
+      color: #111827;
+    }
+
+    .cbi-table th {
+      font-weight: 700;
+      font-size: 14px;
+      color: #1e293b;
+      letter-spacing: 0.02em;
+    }
+
+    .cbi-table tbody tr:nth-child(even) {
+      background: #fafbff;
+    }
+
+    .cbi-table .muted {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .cbi-table thead {
+        display: none;
+      }
+
+      .cbi-table,
+      .cbi-table tbody,
+      .cbi-table tr,
+      .cbi-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .cbi-table tr {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        box-shadow: 0 4px 12px rgba(16, 24, 40, 0.05);
+      }
+
+      .cbi-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        border: none;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 14px;
+      }
+
+      .cbi-table td:last-child {
+        border-bottom: none;
+      }
+
+      .cbi-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #334155;
+        flex-basis: 50%;
+        text-align: left;
+      }
+    }
+  </style>
+
+  <div class="cbi-wrap">
+    <table class="cbi-table">
+      <caption>Visa-Free Access Overview</caption>
+      <thead>
+        <tr>
+          <th>Region</th>
+          <th>Visa-Free Access Highlights</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Region"><strong>Europe</strong></td>
+          <td data-label="Visa-Free Access Highlights">Schengen Zone (90 days), United Kingdom, Ireland, Balkans</td>
+        </tr>
+        <tr>
+          <td data-label="Region"><strong>Americas</strong></td>
+          <td data-label="Visa-Free Access Highlights">Canada (eTA pending), Brazil, Uruguay, Paraguay, Chile</td>
+        </tr>
+        <tr>
+          <td data-label="Region"><strong>Middle East</strong></td>
+          <td data-label="Visa-Free Access Highlights">Israel, Turkey, UAE (90-day entry permitted)</td>
+        </tr>
+        <tr>
+          <td data-label="Region"><strong>Africa</strong></td>
+          <td data-label="Visa-Free Access Highlights">South Africa, Tunisia, Morocco</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 Once the U.S. Visa Waiver reinstatement is complete, Argentina’s mobility network will rival that of EU member states such as Portugal or Greece.
 
@@ -159,4 +190,3 @@ If the U.S. Visa Waiver reinstatement proceeds as planned, Argentina will likely
 Applications for Argentina’s Citizenship by Investment Program are expected to open in late 2025 or early 2026. Join the waitlist to receive early notifications once the official application window opens, along with expert insights and sector updates.
 
 [Join the waitlist](https://www.argentinacitizenships.com/)
-
