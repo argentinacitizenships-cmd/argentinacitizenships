@@ -364,12 +364,17 @@
             if (!table.classList.contains("cbi-table")) {
               table.classList.add("cbi-table");
             }
-            if (!table.parentElement || !table.parentElement.classList.contains("cbi-wrap")) {
-              var wrap = document.createElement("div");
-              wrap.className = "cbi-wrap";
-              table.parentNode.insertBefore(wrap, table);
-              wrap.appendChild(table);
+            if (table.parentElement && table.parentElement.classList.contains("cbi-wrap")) {
+              return;
             }
+            var currentParent = table.parentNode;
+            var embed = document.createElement("div");
+            embed.className = "code-embed-3 w-embed";
+            var wrap = document.createElement("div");
+            wrap.className = "cbi-wrap";
+            currentParent.insertBefore(embed, table);
+            embed.appendChild(wrap);
+            wrap.appendChild(table);
           });
         }
 
