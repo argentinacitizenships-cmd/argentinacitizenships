@@ -1456,6 +1456,9 @@
     <script>
       (function () {
         var slug = "argentina-golden-visa-investor-interest";
+        var basePath = window.location.pathname.includes("/argentinacitizenships/")
+          ? "/argentinacitizenships"
+          : "";
         var container = document.querySelector('[data-cms="article"]');
         if (!container) return;
 
@@ -1615,7 +1618,7 @@
             });
         }
 
-        fetch("/content/posts/" + slug + ".md")
+        fetch(basePath + "/content/posts/" + slug + ".md")
           .then(function (res) {
             if (!res.ok) throw new Error("Post not found");
             return res.text();
