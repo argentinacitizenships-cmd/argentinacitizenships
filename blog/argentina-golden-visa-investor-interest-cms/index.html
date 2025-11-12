@@ -1610,6 +1610,8 @@
               );
               if (!legacy) throw new Error("Legacy content not found");
               container.innerHTML = legacy.innerHTML;
+              ensureTableStyles();
+              enhanceTables(container);
             });
         }
 
