@@ -5,11 +5,11 @@ backend:
   base_url: https://decap-auth.onrender.com
   auth_endpoint: oauth
 
-site_url: https://argentinacitizenships.netlify.app
-display_url: https://argentinacitizenships.netlify.app
+site_url: https://argentinacitizenships-cmd.github.io/argentinacitizenships
+display_url: https://argentinacitizenships-cmd.github.io/argentinacitizenships
 
 media_folder: images/uploads
-public_folder: /images/uploads
+public_folder: /argentinacitizenships/images/uploads
 
 collections:
   - name: posts
