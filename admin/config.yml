@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: argentinacitizenships-cmd/argentinacitizenships
   branch: main
+  base_url: https://decap-auth.onrender.com
+  auth_endpoint: oauth
 
 site_url: https://argentinacitizenships.netlify.app
 display_url: https://argentinacitizenships.netlify.app
