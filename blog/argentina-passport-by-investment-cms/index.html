@@ -339,6 +339,12 @@
               'meta[name="twitter:image"], meta[property="twitter:image"]'
             );
             if (twitterImage) twitterImage.setAttribute("content", thumb);
+          } else {
+            var heroImg = document.querySelector(".image-6");
+            if (heroImg) {
+              heroImg.src =
+                "../../images/68ff883d169de8e53917460e_Argentina-Passport-by-Investment-p-500.jpg";
+            }
           }
         }
 
