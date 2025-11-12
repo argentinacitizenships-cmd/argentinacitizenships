@@ -124,6 +124,7 @@ Argentina’s global mobility privileges extend across nearly every major world 
         text-align: left;
       }
     }
+
   </style>
 
   <div class="cbi-wrap">
