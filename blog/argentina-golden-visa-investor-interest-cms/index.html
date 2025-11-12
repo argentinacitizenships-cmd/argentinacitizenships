@@ -1567,16 +1567,22 @@
             if (!table.classList.contains("cbi-table")) {
               table.classList.add("cbi-table");
             }
-            if (table.parentElement && table.parentElement.classList.contains("cbi-wrap")) {
+            if (table.closest(".code-embed-3")) {
               return;
             }
-            var currentParent = table.parentNode;
+            var richtext = table.closest(".blog-post");
+            var parent = richtext ? richtext.parentNode : table.parentNode;
+            var referenceNode = richtext ? richtext.nextSibling : table;
             var embed = document.createElement("div");
             embed.className = "code-embed-3 w-embed";
             var wrap = document.createElement("div");
             wrap.className = "cbi-wrap";
-            currentParent.insertBefore(embed, table);
             embed.appendChild(wrap);
+            if (parent) {
+              parent.insertBefore(embed, referenceNode);
+            } else {
+              table.parentNode.insertBefore(embed, table);
+            }
             wrap.appendChild(table);
           });
         }

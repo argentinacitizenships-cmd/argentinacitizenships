@@ -3,7 +3,7 @@ backend:
   repo: argentinacitizenships-cmd/argentinacitizenships
   branch: main
   base_url: https://decap-auth.onrender.com
-  auth_endpoint: oauth
+  auth_endpoint: oauth/authorize
 
 site_url: https://argentinacitizenships-cmd.github.io/argentinacitizenships
 display_url: https://argentinacitizenships-cmd.github.io/argentinacitizenships
